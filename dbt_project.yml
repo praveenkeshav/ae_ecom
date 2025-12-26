@@ -35,3 +35,6 @@ models:
     staging:
       +schema: stg_northwind
       +materialized: view
+    warehouse:
+      +schema: dwh_northwind
+      +materialized: table
