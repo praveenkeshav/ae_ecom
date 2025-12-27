@@ -38,3 +38,6 @@ models:
     warehouse:
       +schema: dwh_northwind
       +materialized: table
+    analytics_obt:
+      +schema: obt_northwind
+      +materialized: table  

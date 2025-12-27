@@ -30,9 +30,9 @@ unique_source as (
     select
         *,
         row_number() over(
-            partition by customer_id
-            order by customer_id, employee_id, order_id, product_id,
-            shipper_id, purchase_order_id, shipper_id, order_date ) as rn
+            partition by customer_id, employee_id, order_id, product_id,
+            shipper_id, purchase_order_id, inventory_id, order_date
+            order by insertion_timestamp) as rn
     from source
 )
 
